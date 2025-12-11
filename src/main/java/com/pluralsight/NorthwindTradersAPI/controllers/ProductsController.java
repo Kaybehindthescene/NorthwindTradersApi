@@ -4,6 +4,7 @@ import com.pluralsight.NorthwindTradersAPI.dao.ProductDao;
 import com.pluralsight.NorthwindTradersAPI.models.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 
@@ -28,7 +29,7 @@ public class ProductsController {
     public Product getProductById(@PathVariable int id){
         return productDao.getById(id);
     }
-    @GetMapping("/{id}")
+    @PutMapping("/{id}")
     public Product updateProduct(@PathVariable int id, @RequestBody Product product){
         product.setProductId(id);
         return productDao.update(product);
