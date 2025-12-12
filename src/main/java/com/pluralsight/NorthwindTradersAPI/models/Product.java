@@ -1,4 +1,4 @@
-package com.pluralsight.NorthwindTradersAPI.models;
+package com.pluralsight.NorthwindTradersAPI.models;  // <-- use your actual package
 
 public class Product {
 
@@ -7,7 +7,10 @@ public class Product {
     private int categoryId;
     private double unitPrice;
 
-    public Product() {}
+
+    public Product() {
+    }
+
 
     public Product(int productId, String productName, int categoryId, double unitPrice) {
         this.productId = productId;
@@ -47,6 +50,4 @@ public class Product {
     public void setUnitPrice(double unitPrice) {
         this.unitPrice = unitPrice;
     }
-
-
 }
